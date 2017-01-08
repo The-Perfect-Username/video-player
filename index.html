@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+            crossorigin="anonymous"></script>
+        <link href="./css/player.css" rel="stylesheet"/>
+        <link href="./css/fa/css/font-awesome.min.css" rel="stylesheet"/>
+    </head>
+    <div class="video-container">
+        <video id="video-player" height="100%" width="100%">
+            <source src="./files/video-240p.mp4" type="video/mp4" >
+        </video>
+        <div id="video-controls">
+            <div id="controls-background"></div>
+            <div id="player-scrollbar">
+                <span id="player-scrollbar-opacity"></span>
+                <span id="player-scrollbar-buffer"></span>
+                <span id="player-scrollbar-background"></span>
+                <span id="player-scrollbar-thumbnail"></span>
+            </div>
+            <div id="play-pause-btn" class="control-block play-pause play">
+                <i id="fa-icon" class="fa fa-play" aria-hidden="true"></i>
+            </div>
+            <div class="control-block volume-control">
+                <div class="volume-block volume-button">
+                    <i id="volume-icon" class="fa fa-volume-up" aria-hidden="true"></i>
+                </div>
+                <div class="volume-block volume-range">
+                    <input class="volume" type="range" onInput='changeVolume(this.value)' min="0" max="100" value="100">
+                </div>
+            </div>
+            <div class="control-block video-time">
+                <div class="video-timer">
+                    <span id="current-time">0:00</span> / <span id="duration">0:00</span>
+                </div>
+            </div>
+            <div class="control-block resolution">
+                <ul id="resolution-menu">
+                    <li class="resolution-option">
+                        <span class="resolution-text">1080p</span>
+                    </li>
+                    <li class="resolution-option">
+                        <span class="resolution-text">720p</span>
+                    </li>
+                    <li class="resolution-option">
+                        <span class="resolution-text">480p</span>
+                    </li>
+                    <li class="resolution-option">
+                        <span class="resolution-text">360p</span>
+                    </li>
+                    <li class="resolution-option">
+                        <span class="resolution-text">240p</span>
+                        <i class="fa fa-check" aria-hidden="true"></i>
+                    </li>
+                </ul>
+                <div id="resolution-btn">
+                    <i class="fa fa-cog" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/player.js"></script>
+</html>
