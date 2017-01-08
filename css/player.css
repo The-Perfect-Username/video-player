@@ -2,8 +2,8 @@
 Video controls
 ************************************/
 .video-container {
-    height: 360px;
-    width: 640px;
+    height: calc(360px + 360px/2);
+    width: calc(640px + 640px/2);
     position: relative;
     font-family: "Helvetica";
 }
@@ -50,6 +50,7 @@ Video controls
 
 .volume-range {
     display: none;
+    margin-left: 10px;
 }
 
 .control-block i.fa {
