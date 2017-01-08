@@ -11,7 +11,7 @@ $(document).ready(function() {
     });
 
     $(".video-container").contextmenu(function(e){
-        e.preventDefault();
+        //e.preventDefault();
     });
 
     // Play/pause video when the spacebar is pressed
@@ -104,13 +104,27 @@ $(document).ready(function() {
     });
 
     $(document).on("click", "#resolution-btn", function(e) {
-        // $("#resolution-menu").toggle();
+        $("#resolution-menu").toggle();
+    });
+
+    $(document).on("click", "li.resolution-option", function(e) {
+        var isPlaying = video.playing;
+        // Get the check icon and move it to the selected option
+        $(this).append($("i#resolution-check"));
+        // Retrieve the video URL for that resolution
+        var videoURL = $(this).attr("rel");
+        // Retrive the current time of the current video playing
         var resCurrentTime = video.currentTime;
+        // Get the source tag
         var sources = video.getElementsByTagName('source');
-        sources[0].src = "http://localhost/vidhost/app/files/uploads/videos/1/22/22-1080p.mp4";
+        // Replace the old source with the new video source
+        sources[0].src = videoURL;
+        // Load the new video
         video.load();
+        // Set the time to the current time
         video.currentTime = resCurrentTime;
-        video.play();
+        // Resume playing if the video was already playing
+        if (isPlaying) { video.play(); }
     });
 
 });

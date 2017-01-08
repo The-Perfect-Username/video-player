@@ -52,8 +52,7 @@ Video controls
     display: none;
 }
 
-.control-block i.fa,
-input.volume {
+.control-block i.fa {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
@@ -64,9 +63,11 @@ input.volume {
     -webkit-appearance: none;
     background: transparent !important;
     border: none;
-    margin-top: 0px;
     width: 60px;
     display: inline-block;
+    position: relative;
+    margin: auto;
+    top: 20%;
 }
 
 input.volume::-webkit-slider-runnable-track {
@@ -188,8 +189,8 @@ input#scroll-time::-webkit-slider-thumb {
     position: absolute;
 }
 
-.resolution i.fa {
-    position: absolute;;
+#resolution-btn i.fa {
+    position: absolute;
     top:50%;
     transform: translateY(-50%);
 }
@@ -203,7 +204,8 @@ input#scroll-time::-webkit-slider-thumb {
 }
 
 .resolution-option i.fa {
-    display: inline;
+    display: inline !important;
+    font-size: 95%;
 }
 
 span.resolution-text {
