@@ -130,9 +130,9 @@ input#scroll-time::-webkit-slider-thumb {
 
 #player-scrollbar {
     position: absolute;
-    width: 100%;
-    left: 0;
-    height: 5px;
+    width: 97%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 #player-scrollbar-opacity {
@@ -147,11 +147,11 @@ input#scroll-time::-webkit-slider-thumb {
 #player-scrollbar-thumbnail {
     border: 7px solid goldenrod;
     border-radius: 7px;
-    position: absolute;
-    left: 0;
-    top: 0;
-    transform: translateY(-30%);
     display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -35%);
     z-index: 1;
 }
 
