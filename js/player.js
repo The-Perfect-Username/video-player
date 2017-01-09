@@ -127,6 +127,19 @@ $(document).ready(function() {
         if (isPlaying) { video.play(); }
     });
 
+    var fullscreen = false;
+    $(document).on("click", ".fullscreen", function() {
+        if (fullscreen) {
+            fullscreen = false;
+            $(".video-container").removeAttr("style");
+        } else {
+            fullscreen = true;
+            $(".video-container").css("position", "absolute");
+            $(".video-container").css("height", "100%");
+            $(".video-container").css("width", "100%");
+        }
+    });
+
 });
 
 Object.defineProperty(HTMLMediaElement.prototype, 'playing', {

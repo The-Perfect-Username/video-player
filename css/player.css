@@ -183,11 +183,18 @@ input#scroll-time::-webkit-slider-thumb {
     width: 120px;
     display: none;
 }
-
-.resolution {
-    right: 100px;
-    width: 20px;
+.float-right {
+    right: 20px;
     position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 75%;
+}
+
+.resolution,
+.fullscreen {
+    width: 20px;
+    position: relative;
 }
 
 #resolution-btn i.fa {
