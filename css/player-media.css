@@ -1,0 +1,23 @@
+@media screen and (min-width: 841px) {
+    .video-container {
+        height: calc(360px + 360px/2);
+        width: calc(640px + 640px/2);
+    }
+}
+
+@media screen and (max-width: 840px) {
+    .video-container {
+        width: 100% !important;
+    }
+
+    #video-controls {
+        height: 40px;
+        font-size: 0.7em !important;
+        bottom: 5px;
+    }
+
+    .video-timer {
+        margin-left: -10px !important;
+        font-size: 1em !important;
+    }
+}

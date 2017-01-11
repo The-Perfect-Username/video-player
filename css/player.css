@@ -2,8 +2,6 @@
 Video controls
 ************************************/
 .video-container {
-    height: calc(360px + 360px/2);
-    width: calc(640px + 640px/2);
     position: relative;
     font-family: "Helvetica";
 }
